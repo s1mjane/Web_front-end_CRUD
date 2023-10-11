@@ -9,7 +9,37 @@
 body {
 	max-width: 1200px;
 	margin: 0 auto;
-	font-family: Arial, sans-serif;
+}
+
+.jane {
+	width: 100%;
+	max-width: 800px;
+	margin: 20px;
+	border: 3px solid lightcoral;
+	border-radius: 10px;
+	background-color: rgb(255, 239, 242);
+	padding: 20px;
+}
+
+.anniversary {
+	display: block;
+	padding: 10px;
+	background-color: transparent;
+	border: 1px solid transparent;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.title1 {
+	font-weight: bolder;
+	font-size: 20px;
+	background-color: lightcoral;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
+	color: white;
+	text-align: center;
 }
 
 /* Responsive styling for the title */
@@ -23,9 +53,9 @@ body {
 
 /* Make the table responsive */
 table {
-	width: 100%;
 	border-collapse: collapse;
-	margin-top: 20px;
+	margin: 5px;
+	width: 740px;
 }
 
 th,
@@ -49,7 +79,7 @@ td {
 .add,
 .srch {
 	width: 100%;
-	margin: 5px 0;
+	margin: 5px;
 	padding: 15px;
 	border-radius: 50px;
 	cursor: pointer;
@@ -64,7 +94,7 @@ td {
 /* Adjust styles for small screens */
 @media screen and (max-width: 768px) {
 	.title {
-		font-size: 20px;
+		font-size: 17px;
 	}
 
 	table {
