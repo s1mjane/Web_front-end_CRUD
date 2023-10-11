@@ -1,0 +1,60 @@
+/* Add media queries for smaller screens */
+@media only screen and (max-width: 768px) {
+	.title {
+		font-size: 20px;
+		width: 100%;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	th,
+	td {
+		font-size: 12px;
+		padding: 10px;
+	}
+
+	.add {
+		width: 100%;
+	}
+
+	.srch {
+		width: 100%;
+	}
+
+	.search-mode {
+		width: 100%;
+	}
+}
+
+/* Additional media queries for even smaller screens if needed */
+@media only screen and (max-width: 480px) {
+	.title {
+		font-size: 16px;
+	}
+
+	th,
+	td {
+		font-size: 10px;
+		padding: 8px;
+	}
+
+	.add {
+		font-size: 12px;
+		padding: 10px;
+	}
+
+	.srch {
+		font-size: 12px;
+		padding: 10px;
+	}
+
+	.search-mode {
+		height: 30px;
+	}
+
+	input {
+		height: 30px;
+	}
+}
