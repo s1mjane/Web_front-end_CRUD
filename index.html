@@ -7,102 +7,151 @@
 		.title {
 			background-color: pink;
 			margin: 5px;
-			padding: 10px;
+			padding: 20px;
 			border-radius: 5px;
 			font-size: 30px;
 			color: black;
+			width: 740px;
 		}
 
 		th {
 			padding: 15px;
-			background-color: hotpink;
+			background-color: lightpink;
 			margin: 5px;
 			border-radius: 5px;
 		}
 
-		tr {
-			background-color: ivory;
+		.tr {
+			background-color: rgb(231, 231, 231);
 			border-radius: 5px;
 		}
 
 		td {
 			padding: 15px;
 		}
+
+		.add {
+			width: 130px;
+			font-size: 15px;
+			background-color: lightpink;
+			border-radius: 50px;
+			margin: 5px;
+			padding: 15px;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.srch {
+			width: 90px;
+			background-color: rgb(172, 172, 172);
+			border-radius: 50px;
+			margin: 5px;
+			padding: 15px;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.search-mode {
+			/* position: relative; */
+			width: 500px;
+			height: 40px;
+			margin: 10px;
+		}
+
+		input {
+			border: 2px solid pink;
+			border-radius: 50px;
+			width: 100%;
+			height: 100%;
+		}
+
+		.etc {
+			color: gray;
+			font-size: 15px;
+			text-align: center;
+		}
 	</style>
 </head>
 
 <body>
-	<h1 class="title">n-th anniversary🎉</h1>
-	<divde>
-		<menu class="add">
-			<add>Add</add>
-		</menu>
-	</divde>
-	<table bodrer=1>
-		<tr>
-			<th>🖤</th>
-			<th>D-day</th>
-			<th>Anniversary</th>
-			<th>Date</th>
-			<th>With</th>
-			<th>Memo</th>
-			<th>Edit</th>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>D-65</td>
-			<td>23-2 겨울학기 종강</td>
-			<td>2023.12.10</td>
-			<td>-</td>
-			<td>6학기 끝</td>
-			<td colspan="2">update delete</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>D-137</td>
-			<td>Mark's Birthday</td>
-			<td>2024.02.24</td>
-			<td>Mark</td>
-			<td>prepare letter & present</td>
-			<td colspan="2">update delete</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>D-228</td>
-			<td>My Birthday</td>
-			<td>2024.05.25</td>
-			<td>Family</td>
-			<td>go home</td>
-			<td colspan="2">update delete</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>D+159</td>
-			<td>Mark 💝 Jane</td>
-			<td>2023.05.05</td>
-			<td>-</td>
-			<td>first day</td>
-			<td colspan="2">update delete</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>D-31</td>
-			<td>200days</td>
-			<td>2023.11.20</td>
-			<td>-</td>
-			<td>Busan trip</td>
-			<td colspan="2">update delete</td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>D-31</td>
-			<td>빼빼로데이</td>
-			<td>2023.11.11</td>
-			<td>Mark</td>
-			<td>빼빼로 먹기</td>
-			<td colspan="2">update delete</td>
-		</tr>
-	</table>
+	<h1 class="title">Congratulations on your n-th anniversary🎉</h1>
+	<divide style="display: flex;">
+		<table bodrer=1>
+			<tr>
+				<th>🖤</th>
+				<th>D-day</th>
+				<th>Anniversary</th>
+				<th>Date</th>
+				<th>With</th>
+				<th>Memo</th>
+				<th>Edit</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>D-65</td>
+				<td>23-2 겨울학기 종강</td>
+				<td>2023.12.10</td>
+				<td>-</td>
+				<td>6학기 끝</td>
+				<td colspan="2">update delete</td>
+			</tr>
+			<tr class="tr">
+				<td>2</td>
+				<td>D-137</td>
+				<td>Mark's Birthday</td>
+				<td>2024.02.24</td>
+				<td>Mark</td>
+				<td>prepare letter & present</td>
+				<td colspan="2">update delete</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>D-228</td>
+				<td>My Birthday</td>
+				<td>2024.05.25</td>
+				<td>Family</td>
+				<td>go home</td>
+				<td colspan="2">update delete</td>
+			</tr>
+			<tr class="tr">
+				<td>4</td>
+				<td>D+159</td>
+				<td>Mark 💝 Jane</td>
+				<td>2023.05.05</td>
+				<td>-</td>
+				<td>first day</td>
+				<td colspan="2">update delete</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>D-31</td>
+				<td>200days</td>
+				<td>2023.11.20</td>
+				<td>-</td>
+				<td>Busan trip</td>
+				<td colspan="2">update delete</td>
+			</tr>
+			<tr class="tr">
+				<td>6</td>
+				<td>D-31</td>
+				<td>빼빼로데이</td>
+				<td>2023.11.11</td>
+				<td>Mark</td>
+				<td>빼빼로 먹기</td>
+				<td colspan="2">update delete</td>
+			</tr>
+		</table>
+	</divide>
+	<div style="display: flex;">
+		<div class="search-mode">
+			<input type="text">
+		</div>
+		<search class="srch">Serach</search>
+		<button type="button" class="add" id="btn" onclick="document.location.href='add.html'">Add</button>
+	</div>
+
+
+	<p class="etc">© 2023 실전프로젝트1 1분반 21900412 심재인 기념일 관리 프로그램</p>
 </body>
 
 </html>
