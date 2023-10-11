@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,7 +12,7 @@
 
 		input {
 			width: 300px;
-			height: 40px;
+			height: 20px;
 			border-radius: 5px;
 			margin: 10px;
 			padding: 10px;
@@ -39,7 +40,7 @@
 
 		.add {
 			width: 170px;
-			font-size: 20px;
+			font-size: 15px;
 			background-color: lightcoral;
 			border-radius: 20px;
 			margin: 5px;
@@ -55,32 +56,57 @@
 <body>
 	<form>
 		<fieldset class="jane">
-			<legend class="title">💝 Add your special anniversary 💝
-			</legend>
+			<legend class="title">💝 Add your special anniversary 💝</legend>
 
-			<label for=" title">🎁 Title of Anniversary</label><br>
+			<label for="title">🎁 Title of Anniversary</label><br>
 			<input type="text" id="title" name="title" value="My birthday"><br><br>
 
 			<label for="date">🗓️ Date</label><br>
 			<input type="date" id="date" name="date"><br><br>
 
 			<label for="with">👩🏻‍❤️‍👨🏻 With</label><br>
-			<input type="text" id="with" name="with" value="Family">
-			<br><br>
+			<input type="text" id="with" name="with" value="Family"><br><br>
 
 			<label for="Memo">📝 Memo</label><br>
-			<textarea name="Memo" rows="5" cols="30">
-				Busan trip!
-			</textarea>
-			<br><br>
-
+			<textarea name="Memo" rows="5" cols="30">Busan trip!</textarea><br><br>
 		</fieldset>
 	</form>
-	<div style="width:500px; text-align: center;">
-		<button type="button" class="add" id="btn"
-			onclick="document.location.href='https://pp2s1mjane2.netlify.app/'">+</button>
+
+	<div style="width: 500px; text-align: center;">
+		<button type="button" class="add" id="btn" onclick="validateAndAddAnniversary()">추가</button>
 	</div>
 
+	<script>
+		function validateAndAddAnniversary() {
+			var title = document.getElementById("title").value;
+			var date = document.getElementById("date").value;
+			var withwho = document.getElementById("with").value;
+			var memo = document.getElementById("memo").value;
+
+
+			if (title.trim() === "") {
+				alert('🎁 Title of Anniversary 칸을 작성하세요.');
+				return;
+			}
+
+			if (date.trim() === "") {
+				alert('🗓️ Date 칸을 작성하세요');
+				return;
+			}
+
+			if (withwho.trim() === "") {
+				alert('👩🏻‍❤️‍👨🏻 With 칸을 작성하세요.');
+				return;
+			}
+
+			if (memo.trim() === "") {
+				alert('📝 Memo 칸을 작성하세요.');
+				return;
+			}
+
+			alert('기념일이 추가되었습니다!');
+		}
+	</script>
 </body>
 
 </html>
