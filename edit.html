@@ -3,6 +3,15 @@
 
 <head>
 	<style>
+		.day {
+			text-align: right;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: bold;
+		}
+
 		.jane {
 			background-color: pink;
 			;
@@ -30,7 +39,7 @@
 			text-align: center;
 		}
 
-		.add {
+		.edit {
 			width: 170px;
 			font-size: 15px;
 			background-color: lightcoral;
@@ -48,59 +57,67 @@
 <body>
 	<form>
 		<fieldset class="jane">
-			<legend class="title">💝 Add your special anniversary 💝</legend>
+			<legend class="title">💝 Edit your special anniversary 💝</legend>
+
+			<p class="day"> 228 days left until your anniversary!</p>
 
 			<label for="title">🎁 Title of Anniversary</label><br>
-			<input type="text" id="title" name="title" value="My birthday"><br><br>
+			<input type="text" id="title" name="title" value="My Birthday 🥰"><br><br>
 
 			<label for="date">🗓️ Date</label><br>
-			<input type="date" id="date" name="date"><br><br>
+			<input type="date" id="date" name="date" value="2024-05-25"><br><br>
+
 
 			<label for="with">👩🏻‍❤️‍👨🏻 With</label><br>
 			<input type="text" id="with" name="with" value="Family"><br><br>
 
 			<label for="Memo">📝 Memo</label><br>
-			<input style="height:50px" ;type="memo" id="memo" name="memo" value="Busan Trip!"><br><br>
+			<input style="height:50px" ;type="memo" id="memo" name="memo" value="go home"><br><br>
 
 		</fieldset>
 	</form>
 
 	<div style="width: 500px; text-align: center;">
-		<button type="button" class="add" id="btn" onclick="validateAndAddAnniversary()">추가</button>
-	</div>
 
-	<script>
-		function validateAndAddAnniversary() {
-			var title = document.getElementById("title").value;
-			var date = document.getElementById("date").value;
-			var withwho = document.getElementById("with").value;
-			var memo = document.getElementById("memo").value;
+		<button type="button" class="edit" id="btn" onclick="showDeleteConfirmation()">수정</button>
+		<script>
+			function showDeleteConfirmation() {
 
+				var title = document.getElementById("title").value;
+				var date = document.getElementById("date").value;
+				var withwho = document.getElementById("with").value;
+				var memo = document.getElementById("memo").value;
 
-			if (title.trim() === "") {
-				alert('🎁 Title of Anniversary 칸을 작성하세요.');
-				return;
+				if (title.trim() === "") {
+					alert('🎁 Title of Anniversary 칸을 작성하세요.');
+					return;
+				}
+
+				if (date.trim() === "") {
+					alert('🗓️ Date 칸을 작성하세요');
+					return;
+				}
+
+				if (withwho.trim() === "") {
+					alert('👩🏻‍❤️‍👨🏻 With 칸을 작성하세요.');
+					return;
+				}
+
+				if (memo.trim() === "") {
+					alert('📝 Memo 칸을 작성하세요.');
+					return;
+				}
+
+				if (title.trim() != "" && date.trim() != "" && withwho.trim() != "" && memo.trim() != "")
+					var isConfirmed = confirm('게시물을 수정할까요?');
+
+				if (isConfirmed) {
+					// 수정 로직
+				}
 			}
+		</script>
 
-			if (date.trim() === "") {
-				alert('🗓️ Date 칸을 작성하세요');
-				return;
-			}
 
-			if (withwho.trim() === "") {
-				alert('👩🏻‍❤️‍👨🏻 With 칸을 작성하세요.');
-				return;
-			}
-
-			if (memo.trim() === "") {
-				alert('📝 Memo 칸을 작성하세요.');
-				return;
-			}
-
-			if (title.trim() != "" && date.trim() != "" && withwho.trim() != "" && memo.trim() != "")
-				alert('기념일이 추가되었습니다!');
-		}
-	</script>
 </body>
 
 </html>
