@@ -19,14 +19,6 @@
 			border: 1px solid lightcoral;
 		}
 
-		textarea {
-			width: 300px;
-			border-radius: 5px;
-			margin: 10px;
-			padding: 10px;
-			border: 1px solid lightcoral;
-		}
-
 		.title {
 			font-weight: bolder;
 			font-size: 20px;
@@ -68,7 +60,8 @@
 			<input type="text" id="with" name="with" value="Family"><br><br>
 
 			<label for="Memo">📝 Memo</label><br>
-			<textarea name="Memo" rows="5" cols="30">Busan trip!</textarea><br><br>
+			<input style="height:50px" ;type="memo" id="memo" name="memo" value="Busan Trip!"><br><br>
+
 		</fieldset>
 	</form>
 
@@ -104,7 +97,8 @@
 				return;
 			}
 
-			alert('기념일이 추가되었습니다!');
+			if (title.trim() != "" && date.trim() != "" && withwho.trim() != "" && memo.trim() != "")
+				alert('기념일이 추가되었습니다!');
 		}
 	</script>
 </body>
